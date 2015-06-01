@@ -1,0 +1,4 @@
+data NatList = NVoid | Ncons Integer NatList
+
+
+** :k -->> kind

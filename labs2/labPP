@@ -1,0 +1,22 @@
+#lang racket
+(define suma
+  (lambda (a b)
+    (+ a b)))
+
+(define suma_intarziata
+  (lambda (a b)
+    (lambda () (+ a b)
+    )))
+
+(suma 1 3)
+((suma_intarziata 1 3))
+
+(define ones( cons 1 (λ() ones)))
+
+(define lazy_take (lambda ( n stream ) (if (= n 0) '()
+                                           (cons (car stream) (lazy_take (- n 1 )
+                                                                         ((cdr stream)))))))
+(lazy_take 10 ones)
+
+#;(define naturals (cons 1 (+ ones naturals)))
+

@@ -1,0 +1,51 @@
+h1 f g x y  = f (g x y) x 
+
+h2 f x y = f y x  
+
+h3 f g x y = (f x y  , g y x) 
+
+h4 f x y = (f x x ,  f y y) 
+
+h5 x y z  = z  y  x 
+
+h6 x y z  = (x y) (z y) 
+
+h7 g h x y = (h x y , g x)
+
+h8 x y z = y (x z)
+
+h9 x f = f (f x)
+
+h10 (f , g) x  = (g x , f x)
+
+h11 f g x  = f g x 
+
+h12 z w  = w z z
+
+h13 f g  x  y  = g x  (f  y)
+
+h14  x  y  z  = (x  z)  (y  z)
+
+h15 (x ,  y)  =  x  y  y
+
+h16 x y z = (y z , x (y z))
+
+h17 f g x y  = g x (f y)
+
+h18 (x , y)  = x y y
+
+h20 x y z = y (x z)
+
+h21 x f = f (f x)
+
+h22 f g x  = f (g x x)
+
+h23 f g x  = g (f  (g x)  x)
+
+h24 f x y = (f x y, f y x)
+
+h25 f g x z = (f x , g x z)
+
+h26 x y z  = y (x z)
+
+h27 z w  = w (w z)

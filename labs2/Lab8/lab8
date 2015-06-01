@@ -1,0 +1,24 @@
+#lang racket
+(define (sq x) ( * x x))
+
+(define (flatten L)
+  (foldr (lambda (elem acc)
+           (if (list? elem)
+               (append (flatten elem) acc)
+               (cons elem acc)))
+         '() L))
+
+(flatten '(1 2 (3 4) 5 (6 7 8)))
+
+(define (func L)
+  (foldr (lambda (elem acc)
+           (if ( and (pair? acc)(= (car ( car acc)) elem))                      
+               (cons ( cons elem ( car acc)) (cdr acc))
+               (cons ( cons elem '()) acc))) '() L))
+
+(func '(1 1 1 3 3 3 4 5 5))
+
+(define (foldFunc L)
+  (map (lambda (elem) (cons (car elem) (cons (length elem) '()))) (func L)))
+
+(foldFunc '(1 1 1 3 3 3 4 5 5))

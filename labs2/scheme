@@ -1,0 +1,22 @@
+1. llungime lista
+2. suma elementelor
+3. factorial
+4. test palindrom
+5. append
+
+
+#lang racket
+(define x 10)
+x
+(set! x ( + x 1 ) )
+x
+( define f ( lambda ( x y ) ( + x y ) ) )
+( define f2 ( lambda ( x ) (lambda ( y ) ( + x y ) ) ))
+
+(define listStuff( lambda (x) (if (empty? x) 0 ( + 1 (listStuff(cdr x ) ) ) ) ) )
+
+(define sum ( lambda (x) ( if (empty? x) 0 ( + (car x) ( sum( cdr x)) ))))
+
+(define fact ( lambda (x) ( if(eq? x 0) 1 (* x (fact ( - x 1) ) ) ) ) )
+
+(define appn ( lambda (x) ( if(empty? x ) appn(  ) )
